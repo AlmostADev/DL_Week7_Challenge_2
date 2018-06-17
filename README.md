@@ -9,7 +9,7 @@
 - Luego de pusheados los últimos cambios, sube el link de Github en el desafío de la sección correspondiente en la plataforma.
 
 
-## Ejercicio 1: Ejercicios de bloques en Arrays
+## Ejercicio 1: Ejercicios de bloques en Arrays :white_check_mark:
 
 Dado el array:
 
@@ -17,16 +17,16 @@ Dado el array:
  a = [1, 2, 3, 9, 1, 4, 5, 2, 3, 6, 6]
 ~~~
 
-1. Utilizando *map* generar un nuevo arreglo con cada valor aumentado en 1.
-2. Utilizando *map* generar un nuevo arreglo que contenga todos los valores convertidos a *float*.
-3. Utilizando *map* generar un nuevo arreglo que contenga todos los valores convertidos a *string*.
-4. Utilizando *reject* descartar todos los elementos <u>menores</u> a 5 en el array.
-5. Utilizando *select* descartar todos los elementos <u>mayores</u> a 5 en el array.
-6. Utilizando *inject* obtener la suma de todos los elementos del array.
-7. Utilizando *group_by* agrupar todos los números por paridad (si son pares, es un grupos, si son impares es otro grupo).
-8. Utilizando *group_by* agrupar todos los números mayores y menores que 6.
+1. Utilizando *map* generar un nuevo arreglo con cada valor aumentado en 1. :ballot_box_with_check:
+2. Utilizando *map* generar un nuevo arreglo que contenga todos los valores convertidos a *float*. :ballot_box_with_check:
+3. Utilizando *map* generar un nuevo arreglo que contenga todos los valores convertidos a *string*. :ballot_box_with_check:
+4. Utilizando *reject* descartar todos los elementos <u>menores</u> a 5 en el array. :ballot_box_with_check:
+5. Utilizando *select* descartar todos los elementos <u>mayores</u> a 5 en el array. :ballot_box_with_check:
+6. Utilizando *inject* obtener la suma de todos los elementos del array. :ballot_box_with_check:
+7. Utilizando *group_by* agrupar todos los números por paridad (si son pares, es un grupos, si son impares es otro grupo). :ballot_box_with_check:
+8. Utilizando *group_by* agrupar todos los números mayores y menores que 6. :ballot_box_with_check:
 
-## Ejercicio 2: Arrays y strings
+## Ejercicio 2: Arrays y strings :white_check_mark:
 Dado el arreglo 
 
 ~~~ruby
@@ -35,7 +35,7 @@ nombres = ["Violeta", "Andino", "Clemente", "Javiera", "Paula", "Pia", "Ray"]
 
 Se pide:
  
-1. Extraer todos los elementos que excedan mas de 5 caracteres utilizando el método *.select*.
+1. Extraer todos los elementos que excedan mas de 5 caracteres utilizando el método *.select*. :ballot_box_with_check:
 - Utilizando *.map* crear una arreglo con los nombres en minúscula.
 - Utilizando *.select* para crear un arreglo con todos los nombres que empiecen con P.
 - Utilizando *.map* crear un arreglo único con la cantidad de letras que tiene cada nombre.

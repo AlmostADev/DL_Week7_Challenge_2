@@ -1,7 +1,7 @@
 # Dado el arreglo
 nombres = ["Violeta", "Andino", "Clemente", "Javiera", "Paula", "Pia", "Ray"]
 
-Se pide:
+# Se pide:
 
 # 1. Extraer todos los elementos que excedan mas de 5 caracteres utilizando el método .select.
 nombres.select! {|x| x.length < 5 }
