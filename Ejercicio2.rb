@@ -23,5 +23,5 @@ puts arr_value
 
 # 5. Utilizando .map y .gsub eliminar las vocales de todos los nombres.
 nombres.map! do |x| 
-    x.gsub(/[aeiou]/, '')
+    puts x.gsub(/[aeiou]/, '')
 end

@@ -3,25 +3,23 @@ a = [1, 2, 3, 9, 1, 4, 5, 2, 3, 6, 6]
 
 # 1. Utilizando map aumentar el valor de cada elemento del array en 1.
 a.map! {|x| x + 1 }
-puts a
+print a, "\n"
 
 # 2. Utilizando map convertir todos los valores a float.
 a.map! {|x| x.to_f }
-puts a
+print a, "\n"
 
 # 3. Utilizando map convertir todos los valores a string.
-a.map! {|x| x.to_s }
-for i in 0..a.length
-  puts a[i].class
-end
+arr_str = a.map! {|x| x.to_s }
+print arr_str, "\n"
 
 # 4. Utilizando reject descartar todos los elementos menores a 5 en el array.
 a.reject! {|x| x < 5 }
-puts a
+print a, "\n"
 
 # 5. Utilizando select descartar todos los elementos mayores a 5 en el array.
-a.select! {|x| x < 5 }
-puts a
+a.select! {|x| x > 5 }
+print a, "\n"
 
 # 6. Utilizando inject obtener la suma de todos los elementos del array.
 puts a.inject(0) { |sum, x| sum + x }
