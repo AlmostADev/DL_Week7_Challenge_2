@@ -5,10 +5,10 @@ def add_std(arr)
   puts 'Ingresa edad del estudiante'
   age = gets.chomp.to_i
   puts 'Ingresa comuna del estudiante'
-  district = gets.chomp
+  county = gets.chomp
   puts 'Ingresa género del estudiante'
   gender = gets.chomp
-  arr.push(nombre: name, edad: age, comuna: district, genero: gender)
+  arr.push(nombre: name, edad: age, comuna: county, genero: gender)
   puts "Se ha registrado correctamente!"
   print arr, "\n"
 end
@@ -52,11 +52,22 @@ def ages_sum(arr)
 end
 
 def avg_ages_std(arr)
-
+    sum = arr.inject(0) do |sum, e| 
+        sum + e[:edad]
+    end
+    i = 0
+    arr.each { i += 1 }
+    print "El promedio de edad entre los estudiantes es #{sum}.", "\n"
 end
 
 def gndr_list_std(arr)
-
+    arr.select do |student|
+        if student[:genero] == 'Masculino'
+        puts "Los estudiantes masculinos son: #{student[:nombre]}"
+        else
+        puts "Las estudiantes femeninos son: #{student[:nombre]}"
+        end
+    end
 end
 
 students = [{ nombre: 'Alejandro', edad: 30, comuna: 'Lampa', genero: 'Masculino' }]
