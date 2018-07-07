@@ -23,6 +23,42 @@ def delete_std(arr)
   print arr, "\n"
 end
 
+def counter_std(arr)
+  count = 0
+  arr.each do |students|
+    if students.include?(:nombre)
+      count += 1
+    end
+  end
+  puts "El numero de estudiantes es #{count}"
+end
+
+def county_std(arr)
+  arr.select do |student| 
+    puts student[:comuna]
+  end
+end
+
+def age_between_std(arr)
+  arr.select do |student|
+    puts student[:nombre] if student[:edad] >= 20 && student[:edad] <= 25
+  end
+end
+
+def ages_sum(arr)
+  arr.select do |student|
+    puts "El estudiante #{student[:nombre]} tiene #{student[:edad]} años."
+  end
+end
+
+def avg_ages_std(arr)
+
+end
+
+def gndr_list_std(arr)
+
+end
+
 students = [{ nombre: 'Alejandro', edad: 30, comuna: 'Lampa', genero: 'Masculino' }]
 
 # 1. Crear un menú que permita registrar la información de los alumnos del curso.
@@ -55,24 +91,24 @@ loop do
         delete_std(students)
     when 4
      # Opción 4: Muestra la cantidad de personas ingresadas.
-      
+        counter_std(students)
     when 5
     # Opción 5: Muestra las comunas de todas las personas.
     # hint: Generar un array con las comunas, eliminar repeticiones. Considerar que
     # pueden haber nombres escritos con mayúscula y minúscula.
-    
+        county_std(students)
     when 6
     # Opción 6: Muestra una lista con todas las personas que tengan entre 20 y 25 años.
-    
+        age_between_std(students)
     when 7
     # Opción 7: Muestra la suma de las edades de todas las personas.
-    
+        ages_sum(students)
     when 8
     # Opción 8: Muestra el promedio de las edades del grupo.
-    
+        avg_ages_std(students)
     when 9
     # Opción 9: Muestra dos listas de personas, una por cada género.
-    
+        gndr_list_std(students)
     when 10
     # El menú debe repetirse hasta que el usuario ingrese la opción 10 (salir).
       puts "Saliendo..."
