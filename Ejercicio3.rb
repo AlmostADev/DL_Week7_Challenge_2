@@ -13,6 +13,16 @@ def add_std(arr)
   print arr, "\n"
 end
 
+def delete_std(arr)
+  puts 'Ingrese el nombre del estudiante'
+  name = gets.chomp
+  arr.delete_if do |person| 
+    person[:nombre] == name
+  end
+  puts "#{name} ha sido eliminada del libro de clases."
+  print arr, "\n"
+end
+
 students = [{ nombre: 'Alejandro', edad: 30, comuna: 'Lampa', genero: 'Masculino' }]
 
 # 1. Crear un menú que permita registrar la información de los alumnos del curso.
@@ -34,30 +44,37 @@ loop do
     10. Salir"
   opc = gets.chomp.to_i
   case opc
-    # Opción 1: Permite ingresar los datos de una persona:
     when 1
-    # Opción 2: Permite editar los datos de la persona.
-      add_std(students)
+    # Opción 1: Permite ingresar los datos de una persona:
+        add_std(students)
     when 2
-    # Opción 3: Permite eliminar una persona.
+    # Opción 2: Permite editar los datos de la persona.
+      
     when 3
-    #4 Debe terminar el programa.
-    # Opción 4: Muestra la cantidad de personas ingresadas.
+    # Opción 3: Permite eliminar una persona.
+        delete_std(students)
     when 4
-      # Opción 5: Muestra las comunas de todas las personas.
+     # Opción 4: Muestra la cantidad de personas ingresadas.
+      
+    when 5
+    # Opción 5: Muestra las comunas de todas las personas.
     # hint: Generar un array con las comunas, eliminar repeticiones. Considerar que
     # pueden haber nombres escritos con mayúscula y minúscula.
-    when 5
-    # Opción 6: Muestra una lista con todas las personas que tengan entre 20 y 25 años.
+    
     when 6
-    # Opción 7: Muestra la suma de las edades de todas las personas.
+    # Opción 6: Muestra una lista con todas las personas que tengan entre 20 y 25 años.
+    
     when 7
-    # Opción 8: Muestra el promedio de las edades del grupo.
+    # Opción 7: Muestra la suma de las edades de todas las personas.
+    
     when 8
-    # Opción 9: Muestra dos listas de personas, una por cada género.
+    # Opción 8: Muestra el promedio de las edades del grupo.
+    
     when 9
-    # El menú debe repetirse hasta que el usuario ingrese la opción 10 (salir).
+    # Opción 9: Muestra dos listas de personas, una por cada género.
+    
     when 10
+    # El menú debe repetirse hasta que el usuario ingrese la opción 10 (salir).
       puts "Saliendo..."
     break
   end
